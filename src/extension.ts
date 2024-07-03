@@ -1,26 +1,55 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
+// Variable to keep track of key press count
+let keyPressCount = 0;
+// Status bar item to display key press count
+let statusBarItem: vscode.StatusBarItem;
+
+// Function called when the extension is activated
 export function activate(context: vscode.ExtensionContext) {
+    console.log('Congratulations, your extension "don-chan-key-combo" is now active!');
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "don-chan-key-combo" is now active!');
+    // Create a new status bar item with a command to show key press count
+    statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 100);
+    statusBarItem.command = 'don-chan-key-combo.showKeyPressCount';
+    context.subscriptions.push(statusBarItem);
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	const disposable = vscode.commands.registerCommand('don-chan-key-combo.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to tuhe user
-		vscode.window.showInformationMessage('Hello World from don-chan-key-combo!');
-	});
+    // Update the status bar item with the initial key press count
+    updateStatusBarItem();
 
-	context.subscriptions.push(disposable);
+    // Register a command to show an information message with the key press count
+    const disposable = vscode.commands.registerCommand('don-chan-key-combo.showKeyPressCount', () => {
+        vscode.window.showInformationMessage(`Key presses: ${keyPressCount}`);
+    });
+    context.subscriptions.push(disposable);
+    
+
+    // Event listener for changes in the text document (key presses in the editor)
+    vscode.workspace.onDidChangeTextDocument(event => {
+        // Increment the key press count by the number of content changes
+        keyPressCount += event.contentChanges.length;
+        // Update the status bar item with the new key press count
+        updateStatusBarItem();
+    });
+
+       // Event listener for editor actions (can catch mode changes or command executions)
+    vscode.window.onDidChangeTextEditorSelection(event => {
+        // If vim mode or another mode is changing the selection (like cursor movements in normal mode)
+        if (event.kind === vscode.TextEditorSelectionChangeKind.Command) {
+            keyPressCount++;
+            updateStatusBarItem();
+        }
+    });
+
+    // Add the status bar item to the subscriptions to manage its lifecycle
+    context.subscriptions.push(statusBarItem);
 }
 
-// This method is called when your extension is deactivated
+// Function called when the extension is deactivated
 export function deactivate() {}
+
+// Function to update the status bar item with the current key press count
+function updateStatusBarItem(): void {
+    statusBarItem.text = `$(keyboard) Key presses: ${keyPressCount}`;
+    statusBarItem.show();
+}
