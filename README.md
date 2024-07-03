@@ -1,10 +1,12 @@
 # don-chan-key-combo README
 
-This is the README for your extension "don-chan-key-combo". After writing up a brief description, we recommend including the following sections.
+This is an open-source TypeScript project. If anyone is interested in contributing, feel free to contact me via email.
 
 ## Features
+This project is designed to play a sound with every keyboard click within a certain timeframe. For now, I have used the "Don Chan" sound to create a specific combo, as it was my first idea. Of course, you can deactivate it with just a button. Future updates will include different sounds like cream, thick, thoc, and more. This is a great program for those who appreciate the typing experience and love the touch of the keyboard.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+
+# Da modificare e sistemare!!
 
 For example if there is an image subfolder under your extension project workspace:
 
