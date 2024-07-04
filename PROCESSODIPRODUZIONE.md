@@ -38,7 +38,6 @@ https://www.youtube.com/watch?v=kdMG40wUCm4
                 ```
         #### 1. Perche ho dovuto farci luce?
         perche non facendo parte della documentazione di vscode potrebbero forse crearmi un giorno dei problemi ma non lo so,
-
         - in ogni caso per utilizzatori di VIM
         ho messo attraverso i movimenti hjkl il contatore. Come? ho usato sempre dalla documentazione di VSCODE il cambio di selezione come conteggio di ++.
 
@@ -46,7 +45,12 @@ https://www.youtube.com/watch?v=kdMG40wUCm4
        aggiungereeventuali comandi d, c etc..
 
 
-
 ### 
 
 gli assets mi sa che devo metterli da qualche parte per farli costruire in vsce.
+
+
+####
+ALLORA SOLUZIONI 
+- RISCRIVERE DA 0 E FARE DIRETTAMENTE CLICK DELLA TASTIERA SENZA WORK AROUND PARTICOLARI 
+- ALTRIMENTI CERCARE I VS CODE IL COMANDO CTRL 
