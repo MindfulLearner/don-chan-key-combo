@@ -159,7 +159,7 @@
                     },
                     {
                         "command": "don-chan-key-combo.incrementCountShiftRight",
-                        "key": "shiftRight",
+                        "key": "ShiftRight",
                         "when": "editorTextFocus && vim.mode == 'Normal'"
                     },
                     {

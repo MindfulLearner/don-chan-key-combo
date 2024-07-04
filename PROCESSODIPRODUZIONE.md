@@ -9,7 +9,9 @@
 
     4. impostare suuoni tott click di complimen il suono delle combb 
 
-    5. menu personalzzazbile e preset
+    5. menu personalzzazbile e preset, per chi non vuole sentire gli audio nromalmente 
+
+    6. METTERLO ONLINE?? cosi possiamo vedere quanti click di tastiera abbiamo fatto tra di noi tipo rank e metto ranked diamond etc.. tra di noi 
 
 ##  RISOLUZIONI E PROBLEMATICHE DA TENERE CONTO
 

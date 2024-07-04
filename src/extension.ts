@@ -19,7 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     // Register a command to show an information message with the key press count
     const showKeyPressCountDisposable = vscode.commands.registerCommand('don-chan-key-combo.showKeyPressCount', () => {
-        vscode.window.showInformationMessage(`Key presses: ${keyPressCount}`);
+        vscode.window.showInformationMessage(`SWAG JOSH Key presses: ${keyPressCount}`);
     });
     context.subscriptions.push(showKeyPressCountDisposable);
 
