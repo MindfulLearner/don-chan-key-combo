@@ -18,7 +18,7 @@
     #### 1. 
     
         - aggiunti numeri e comandi di controllo attraverso package si richiama e sostituisce e aggiunge a contatore:
-
+https://www.youtube.com/watch?v=kdMG40wUCm4
         da extension.js si richiama con 
                 
                 registerIncrementCommand('don-chan-key-combo.incrementCountAltRight');
