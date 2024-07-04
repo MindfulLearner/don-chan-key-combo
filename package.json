@@ -61,8 +61,6 @@
                         "command": "don-chan-key-combo.incrementCount0",
                         "title": "Increment Count for 0"
                     },
-              
-
 
                     {
                         "command": "don-chan-key-combo.incrementCountCtrlLeft",
@@ -87,6 +85,11 @@
                     {
                         "command": "don-chan-key-combo.incrementCountAltRight",
                         "title": "Increment Count for Alt Right"
+                    },
+
+                    {
+                        "command": "don-chan-key-combo.incrementCountDelete",
+                        "title": "Increment Count for d"
                     }
                   ],
                 "keybindings": [
@@ -135,12 +138,12 @@
                         "key": "9",
                         "when": "editorTextFocus && vim.mode == 'Normal'"
                     },
+
                     {
                         "command": "don-chan-key-combo.incrementCount0",
                         "key": "0",
                         "when": "editorTextFocus && vim.mode == 'Normal'"
                     },
-
 
                     {
                         "command": "don-chan-key-combo.incrementCountCtrlLeft",
@@ -159,7 +162,7 @@
                     },
                     {
                         "command": "don-chan-key-combo.incrementCountShiftRight",
-                        "key": "ShiftRight",
+                        "key": "shiftKey",
                         "when": "editorTextFocus && vim.mode == 'Normal'"
                     },
                     {
@@ -170,6 +173,12 @@
                     {
                         "command": "don-chan-key-combo.incrementCountAltRight",
                         "key": "alt+right",
+                        "when": "editorTextFocus && vim.mode == 'Normal'"
+                    },
+
+                    {
+                        "command": "don-chan-key-combo.incrementCountDelete",
+                        "key": "d",
                         "when": "editorTextFocus && vim.mode == 'Normal'"
                     }
                 ]

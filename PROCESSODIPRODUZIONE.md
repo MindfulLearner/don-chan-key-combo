@@ -41,7 +41,9 @@
 
         - in ogni caso per utilizzatori di VIM
         ho messo attraverso i movimenti hjkl il contatore. Come? ho usato sempre dalla documentazione di VSCODE il cambio di selezione come conteggio di ++.
-        
+
+       #### da  sistemare quando si tiene premuto non aumenta i conteggi,
+       aggiungereeventuali comandi d, c etc..
         
 
 
