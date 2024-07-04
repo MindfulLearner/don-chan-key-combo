@@ -44,8 +44,6 @@
 
        #### da  sistemare quando si tiene premuto non aumenta i conteggi,
        aggiungereeventuali comandi d, c etc..
-        
-
 
 
 
