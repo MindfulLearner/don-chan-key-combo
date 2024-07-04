@@ -15,17 +15,165 @@
   ],
   "main": "./dist/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "don-chan-key-combo.helloWorld",
-        "title": "Hello World"
-      },
-      {
-        "command": "don-chan-key-combo.showKeyPressCount",
-        "title": "Show Key Press Count"
-      }
-    ]
-  },
+    "commands": 
+            [
+                    {
+                        "command": "don-chan-key-combo.showKeyPressCount",
+                        "title": "Show Key Press Count"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCount1",
+                        "title": "Increment Count for 1"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCount2",
+                        "title": "Increment Count for 2"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCount3",
+                        "title": "Increment Count for 3"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCount4",
+                        "title": "Increment Count for 4"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCount5",
+                        "title": "Increment Count for 5"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCount6",
+                        "title": "Increment Count for 6"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCount7",
+                        "title": "Increment Count for 7"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCount8",
+                        "title": "Increment Count for 8"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCount9",
+                        "title": "Increment Count for 9"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCount0",
+                        "title": "Increment Count for 0"
+                    },
+              
+
+
+                    {
+                        "command": "don-chan-key-combo.incrementCountCtrlLeft",
+                        "title": "Increment Count for Ctrl Left"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCountCtrlRight",
+                        "title": "Increment Count for Ctrl Right"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCountShiftLeft",
+                        "title": "Increment Count for Shift Left"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCountShiftRight",
+                        "title": "Increment Count for Shift Right"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCountAltLeft",
+                        "title": "Increment Count for Alt Left"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCountAltRight",
+                        "title": "Increment Count for Alt Right"
+                    }
+                  ],
+                "keybindings": [
+                    {
+                        "command": "don-chan-key-combo.incrementCount1",
+                        "key": "1",
+                        "when": "editorTextFocus && vim.mode == 'Normal'"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCount2",
+                        "key": "2",
+                        "when": "editorTextFocus && vim.mode == 'Normal'"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCount3",
+                        "key": "3",
+                        "when": "editorTextFocus && vim.mode == 'Normal'"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCount4",
+                        "key": "4",
+                        "when": "editorTextFocus && vim.mode == 'Normal'"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCount5",
+                        "key": "5",
+                        "when": "editorTextFocus && vim.mode == 'Normal'"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCount6",
+                        "key": "6",
+                        "when": "editorTextFocus && vim.mode == 'Normal'"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCount7",
+                        "key": "7",
+                        "when": "editorTextFocus && vim.mode == 'Normal'"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCount8",
+                        "key": "8",
+                        "when": "editorTextFocus && vim.mode == 'Normal'"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCount9",
+                        "key": "9",
+                        "when": "editorTextFocus && vim.mode == 'Normal'"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCount0",
+                        "key": "0",
+                        "when": "editorTextFocus && vim.mode == 'Normal'"
+                    },
+
+
+                    {
+                        "command": "don-chan-key-combo.incrementCountCtrlLeft",
+                        "key": "ctrl+left",
+                        "when": "editorTextFocus && vim.mode == 'Normal'"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCountCtrlRight",
+                        "key": "ctrl+right",
+                        "when": "editorTextFocus && vim.mode == 'Normal'"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCountShiftLeft",
+                        "key": "shift+left",
+                        "when": "editorTextFocus && vim.mode == 'Normal'"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCountShiftRight",
+                        "key": "shiftRight",
+                        "when": "editorTextFocus && vim.mode == 'Normal'"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCountAltLeft",
+                        "key": "alt+left",
+                        "when": "editorTextFocus && vim.mode == 'Normal'"
+                    },
+                    {
+                        "command": "don-chan-key-combo.incrementCountAltRight",
+                        "key": "alt+right",
+                        "when": "editorTextFocus && vim.mode == 'Normal'"
+                    }
+                ]
+    },
   "scripts": {
     "vscode:prepublish": "npm run package",
     "compile": "webpack",

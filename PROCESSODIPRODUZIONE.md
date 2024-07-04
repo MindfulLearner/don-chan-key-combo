@@ -1,15 +1,49 @@
 # PROCESSO DI PRODUZIONE PROGRAMMA
 
 ## TASKS
-    - fare un counter della tastiera per click nei file , esso deve essere visualizzata sulla barra sotto, il totale di click
+    1. fare un counter della tastiera per click nei file , esso deve essere visualizzata sulla barra sotto, il totale di click
 
-   - reset dei click ogni tot secondi che interrompe la combo. 
+    2. reset dei click ogni tot secondi che interrompe la combo. 
 
-    - impostare un ogni tot click complimenti x10 x100 et... 
+    3. impostare un ogni tot click complimenti x10 x100 et... 
 
-    - impostare suuoni tott click di complimen il suono delle combb 
+    4. impostare suuoni tott click di complimen il suono delle combb 
 
-    - menu personalzzazbile e preset
+    5. menu personalzzazbile e preset
+
+##  RISOLUZIONI E PROBLEMATICHE DA TENERE CONTO
+
+    #### 1. 
+    
+        - aggiunti numeri e comandi di controllo attraverso package si richiama e sostituisce e aggiunge a contatore:
+
+        da extension.js si richiama con 
+                
+                registerIncrementCommand('don-chan-key-combo.incrementCountAltRight');
+                registerIncrementCommand(`don-chan-key-combo.incrementCount${i}`);
+
+            al file package.json
+                ```
+            "command": "don-chan-key-combo.incrementCount4",
+                "key": "4",
+                "when": "editorTextFocus && vim.mode == 'Normal'"
+                ```
+                ```
+                {
+                    "command": "don-chan-key-combo.incrementCountAltLeft",
+                    "title": "Increment Count for Alt Left"
+                }
+                ```
+        #### 1. Perche ho dovuto farci luce?
+        perche non facendo parte della documentazione di vscode potrebbero forse crearmi un giorno dei problemi ma non lo so,
+
+        - in ogni caso per utilizzatori di VIM
+        ho messo attraverso i movimenti hjkl il contatore. Come? ho usato sempre dalla documentazione di VSCODE il cambio di selezione come conteggio di ++.
+        
+        
+
+
+
 
 ### 
 

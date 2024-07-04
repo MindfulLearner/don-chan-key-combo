@@ -18,28 +18,51 @@ export function activate(context: vscode.ExtensionContext) {
     updateStatusBarItem();
 
     // Register a command to show an information message with the key press count
-    const disposable = vscode.commands.registerCommand('don-chan-key-combo.showKeyPressCount', () => {
+    const showKeyPressCountDisposable = vscode.commands.registerCommand('don-chan-key-combo.showKeyPressCount', () => {
         vscode.window.showInformationMessage(`Key presses: ${keyPressCount}`);
     });
-    context.subscriptions.push(disposable);
-    
+    context.subscriptions.push(showKeyPressCountDisposable);
+
+    // Register commands for each number key
+    const registerIncrementCommand = (command: string) => {
+        const disposable = vscode.commands.registerCommand(command, () => {
+            keyPressCount++;
+            updateStatusBarItem();
+        });
+        context.subscriptions.push(disposable);
+    };
+
+    // Register increment commands for numbers 0-9
+    for (let i = 0; i <= 9; i++) {
+        registerIncrementCommand(`don-chan-key-combo.incrementCount${i}`);
+    }
+
+    // Register increment commands for Alt and Ctrl keys
+    registerIncrementCommand('don-chan-key-combo.incrementCountCtrlLeft');
+    registerIncrementCommand('don-chan-key-combo.incrementCountCtrlRight');
+    registerIncrementCommand('don-chan-key-combo.incrementCountShiftLeft');
+    registerIncrementCommand('don-chan-key-combo.incrementCountShiftRight');
+    registerIncrementCommand('don-chan-key-combo.incrementCountAltLeft');
+    registerIncrementCommand('don-chan-key-combo.incrementCountAltRight');
 
     // Event listener for changes in the text document (key presses in the editor)
-    vscode.workspace.onDidChangeTextDocument(event => {
+    const textDocumentChangeDisposable = vscode.workspace.onDidChangeTextDocument(event => {
         // Increment the key press count by the number of content changes
         keyPressCount += event.contentChanges.length;
         // Update the status bar item with the new key press count
         updateStatusBarItem();
     });
+    context.subscriptions.push(textDocumentChangeDisposable);
 
-       // Event listener for editor actions (can catch mode changes or command executions)
-    vscode.window.onDidChangeTextEditorSelection(event => {
+    // Event listener for editor actions (can catch mode changes or command executions)
+    const editorSelectionChangeDisposable = vscode.window.onDidChangeTextEditorSelection(event => {
         // If vim mode or another mode is changing the selection (like cursor movements in normal mode)
         if (event.kind === vscode.TextEditorSelectionChangeKind.Command) {
             keyPressCount++;
             updateStatusBarItem();
         }
     });
+    context.subscriptions.push(editorSelectionChangeDisposable);
 
     // Add the status bar item to the subscriptions to manage its lifecycle
     context.subscriptions.push(statusBarItem);
