@@ -17,13 +17,13 @@ export function activate(context: vscode.ExtensionContext) {
     // Update the status bar item with the initial key press count
     updateStatusBarItem();
 
-    // Register a command to show an information message with the key press count
+    // a command to show an information message with the key press count
     const showKeyPressCountDisposable = vscode.commands.registerCommand('don-chan-key-combo.showKeyPressCount', () => {
         vscode.window.showInformationMessage(`SWAG JOSH Key presses: ${keyPressCount}`);
     });
     context.subscriptions.push(showKeyPressCountDisposable);
 
-    // Register commands for each number key
+    // commands for each number key
     const registerIncrementCommand = (command: string) => {
         const disposable = vscode.commands.registerCommand(command, () => {
             keyPressCount++;
@@ -32,7 +32,7 @@ export function activate(context: vscode.ExtensionContext) {
         context.subscriptions.push(disposable);
     };
 
-    // Register increment commands for numbers 0-9
+    // increment commands for numbers 0-9
     for (let i = 0; i <= 9; i++) {
         registerIncrementCommand(`don-chan-key-combo.incrementCount${i}`);
     }

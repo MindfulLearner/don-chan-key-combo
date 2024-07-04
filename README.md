@@ -1,4 +1,4 @@
-# don-chan-key-combo README
+# don-chan-key-combo README IN ITALIANO SE SI VUOLE CAPIRE IL PROCEDIMENTO C'E UN FILE PROCESSO DI PRODUZIONE IN  CUI VIENE SPIEGATO QUELLO CHE PENSO
 
 This is an open-source TypeScript project. If anyone is interested in contributing, feel free to contact me via email. !!!FOR NOW ONLY WORKS ON USA KEYBOARD!!!
 
