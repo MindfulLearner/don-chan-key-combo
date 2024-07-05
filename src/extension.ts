@@ -1,4 +1,3 @@
-import { register } from 'module';
 import * as vscode from 'vscode';
 
 let keyPressCount = 0;
@@ -30,14 +29,6 @@ export function activate(context: vscode.ExtensionContext) {
         registerIncrementCommand(`don-chan-key-combo.incrementCount${i}`);
     }
 
-    registerIncrementCommand('don-chan-key-combo.incrementCountCtrlLeft');
-    registerIncrementCommand('don-chan-key-combo.incrementCountCtrlRight');
-    registerIncrementCommand('don-chan-key-combo.incrementCountShiftLeft');
-    registerIncrementCommand('don-chan-key-combo.incrementCountShiftRight');
-    registerIncrementCommand('don-chan-key-combo.incrementCountAltLeft');
-    registerIncrementCommand('don-chan-key-combo.incrementCountAltRight');
-    // incrementCountDelete
-    registerIncrementCommand('don-chan-key-combo.incrementCountDelete');
 
     const textDocumentChangeDisposable = vscode.workspace.onDidChangeTextDocument(event => {
         keyPressCount += event.contentChanges.length;

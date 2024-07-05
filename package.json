@@ -60,36 +60,6 @@
                     {
                         "command": "don-chan-key-combo.incrementCount0",
                         "title": "Increment Count for 0"
-                    },
-
-                    {
-                        "command": "don-chan-key-combo.incrementCountCtrlLeft",
-                        "title": "Increment Count for Ctrl Left"
-                    },
-                    {
-                        "command": "don-chan-key-combo.incrementCountCtrlRight",
-                        "title": "Increment Count for Ctrl Right"
-                    },
-                    {
-                        "command": "don-chan-key-combo.incrementCountShiftLeft",
-                        "title": "Increment Count for Shift Left"
-                    },
-                    {
-                        "command": "don-chan-key-combo.incrementCountShiftRight",
-                        "title": "Increment Count for Shift Right"
-                    },
-                    {
-                        "command": "don-chan-key-combo.incrementCountAltLeft",
-                        "title": "Increment Count for Alt Left"
-                    },
-                    {
-                        "command": "don-chan-key-combo.incrementCountAltRight",
-                        "title": "Increment Count for Alt Right"
-                    },
-
-                    {
-                        "command": "don-chan-key-combo.incrementCountDelete",
-                        "title": "Increment Count for d"
                     }
                   ],
                 "keybindings": [
@@ -142,43 +112,6 @@
                     {
                         "command": "don-chan-key-combo.incrementCount0",
                         "key": "0",
-                        "when": "editorTextFocus && vim.mode == 'Normal'"
-                    },
-
-                    {
-                        "command": "don-chan-key-combo.incrementCountCtrlLeft",
-                        "key": "ctrl+left",
-                        "when": "editorTextFocus && vim.mode == 'Normal'"
-                    },
-                    {
-                        "command": "don-chan-key-combo.incrementCountCtrlRight",
-                        "key": "ctrl+right",
-                        "when": "editorTextFocus && vim.mode == 'Normal'"
-                    },
-                    {
-                        "command": "don-chan-key-combo.incrementCountShiftLeft",
-                        "key": "shift+left",
-                        "when": "editorTextFocus && vim.mode == 'Normal'"
-                    },
-                    {
-                        "command": "don-chan-key-combo.incrementCountShiftRight",
-                        "key": "shift",
-                        "when": "editorTextFocus && vim.mode == 'Normal'"
-                    },
-                    {
-                        "command": "don-chan-key-combo.incrementCountAltLeft",
-                        "key": "alt+left",
-                        "when": "editorTextFocus && vim.mode == 'Normal'"
-                    },
-                    {
-                        "command": "don-chan-key-combo.incrementCountAltRight",
-                        "key": "alt+right",
-                        "when": "editorTextFocus && vim.mode == 'Normal'"
-                    },
-
-                    {
-                        "command": "don-chan-key-combo.incrementCountDelete",
-                        "key": "d",
                         "when": "editorTextFocus && vim.mode == 'Normal'"
                     }
                 ]
