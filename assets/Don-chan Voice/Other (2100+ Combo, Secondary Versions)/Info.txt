@@ -1,0 +1,1 @@
+The files that end with combo_****_c are played during 1 player play. Files that end with combo_****_r are played from the right speaker during 2 player play.
